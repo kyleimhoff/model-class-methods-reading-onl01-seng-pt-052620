@@ -11,8 +11,7 @@ helper_method :params
       @posts = Post.where("created_at <?", Time.zone.today.beginning_of_day)
     end
   else
-    # if no filters are applied, show all posts
-    @posts = Post.all
+    
     @posts = Post.all
   end
 
